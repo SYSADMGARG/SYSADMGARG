@@ -1,0 +1,34 @@
+Linux Display Resolution Addition Commands:
+
+sudo apt remove xserver-xorg-video-fbdev
+sudo xrandr --newmode "1600x900_60.00"  118.25  1600 1696 1856 2112  900 903 908 934 -hsync +vsync
+sudo xrandr --addmode VGA-1 "1600x900_60.00"
+gedit ~/.profile
+
+sudo xcode-select --reset(If Xcode Simulator Stops)(MAC OS)
+
+Creating swap space
+
+sudo su
+cd /var
+touch swapfile
+chmod 600 swapfile
+ls -la swapfile
+dd if=/dev/zero of=/var/swapfile bs=1024k count=1000
+swapon /var/swapfile
+cat /proc/swaps
+/var/swapfile none swap sw 0 0
+https://linuxize.com/post/how-to-add-swap-space-on-ubuntu-18-04/
+
+https://www.linuxandubuntu.com/home/how-to-create-or-increase-swap-space-in-linux
+
+
+userdel username(Delete user)
+userdel -r username(delete user directory forcefully)
+
+USB drive bootable via Terminal in Linux
+
+df
+sudo umount /dev/sdb1
+sudo dd bs=4M if=/home/akshay/Downloads/linuxmint-19.3-cinnamon-64bit.iso of=/dev/sdb1 status=progress oflag=sync
+

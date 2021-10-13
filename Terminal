@@ -32,3 +32,46 @@ df
 sudo umount /dev/sdb1
 sudo dd bs=4M if=/home/akshay/Downloads/linuxmint-19.3-cinnamon-64bit.iso of=/dev/sdb1 status=progress oflag=sync
 
+
+
+Most commands follow a simple pattern of syntax:
+
+command [options…] [arguments…]
+Typically options alter the behavior of the command and arguments are items or values for the command to act upon. Although there are some commands in Linux that aren’t entirely consistent with this syntax, most commands use this syntax or something similar
+An argument can be used to specify something for the command to act upon.
+
+ls(command displays a listing of information about files)
+The ls command can be given the name of a directory as an argument, and it will list the contents of that directory.
+the aptitude command is a package management tool available on some Linux distributions. This command will accept moo as an argument.
+
+Options can be used to alter the behavior of a command.
+
+-l option is provided to the ls command, which results in a "long display" output, meaning the output gives more information about each of the files listed.
+so adding the -r option will print the results in reverse alphabetical order.
+
+Multiple options can be used at once, either given as separate options as in -l -r or combined like -lr. The output of all of these examples would be the same
+-v(verbose)
+
+The -t option will sort the files by timestamp
+
+
+Printing Working Directory
+pwd
+pwd [OPTIONS]
+
+
+To navigate the filesystem structure, use the cd (change directory) command to change directories
+cd [options] [path]
+If you think of the filesystem as a map, paths are the step-by-step directions; they can be used to indicate the location of any file within the filesystem. There are two types of paths: absolute and relative. Absolute paths start at the root of the filesystem, relative paths start from your current location.
+
+An absolute path allows you to specify the exact location of a directory. It always starts at the root directory, therefore it always begins with the / character.
+
+A relative path gives directions to a file relative to your current location in the filesystem. Relative paths do not start with the / character, they start with the name of a directory.
+
+Regardless of which directory you are in, .. always represents one directory higher relative to the current directory, sometimes referred to as the parent directory.
+
+Regardless of which directory you are in, the . character always represents your current directory.
+
+The home directory of the current user is represented by the ~ character
+
+
